@@ -8,7 +8,8 @@
     <appender name="aws_cloud_watch_log" class="ca.pjer.logback.AwsLogsAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <!--ERROR 레벨보다 낮은 로그들은 필터링.-->
-            <level>ERROR | WARN</level>
+            <level>ERROR</level>
+            <level>WARN</level>
         </filter>
         <layout>
             <pattern>[%thread] [%date] [%level] [%file:%line] - %msg%n</pattern>
